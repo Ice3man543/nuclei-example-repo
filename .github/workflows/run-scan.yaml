@@ -15,7 +15,7 @@ jobs:
           go-version: 1.15
 
       - name: Airflow deployment
-        run: docker-compose up -d --build && screen -d -m bash -c 'docker-compose up -d' &&  sleep 10'
+        run: docker-compose up -d --build && screen -d -m bash -c 'docker-compose up -d' &&  sleep 10
 
       - name: Nuclei - DAST Scan
         uses: projectdiscovery/nuclei-action@main
